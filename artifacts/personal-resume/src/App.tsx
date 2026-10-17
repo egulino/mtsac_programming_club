@@ -18,7 +18,7 @@ function Home() {
   return (
     <main className="site-shell">
       <header className="topbar" data-testid="navigation-main">
-        <a className="wordmark" href="#top" aria-label="Back to top">M<span>.</span></a>
+        <a className="wordmark" href="#top" aria-label="Back to top">EG<span>.</span></a>
         <nav aria-label="Main navigation">
           <a href="#about">About</a>
           <a href="#experience">Experience</a>
@@ -39,7 +39,7 @@ function Home() {
         <div className="hero-grid">
           <div className="hero-copy">
             <p className="eyebrow reveal"><span className="eyebrow-line" /> DESIGNER &amp; STRATEGIST <span className="eyebrow-dot">/</span> BROOKLYN, NY</p>
-            <h1 id="hero-title" className="reveal reveal-delay">Maya<br /><em>Ellison</em><span className="hero-period">.</span></h1>
+            <h1 id="hero-title" className="reveal reveal-delay">Eric<br /><em>Gulino</em><span className="hero-period">.</span></h1>
             <p className="hero-lede reveal reveal-delay">I make complicated things feel <em>clear</em> — and useful things feel a little more human.</p>
             <div className="hero-actions reveal reveal-delay">
               <a className="primary-link" href="#experience">Explore my work <ArrowDownRight size={16} /></a>
@@ -168,11 +168,11 @@ function Home() {
           <a className="contact-button" href="mailto:hello@example.com"><Mail size={17} /> hello@example.com <ArrowUpRight size={16} /></a>
           <div className="contact-foot"><span>Brooklyn, NY <span>·</span> Open to select collaborations</span><span>LINKEDIN / <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LET’S CONNECT <ArrowUpRight size={12} /></a></span></div>
         </div>
-        <div className="contact-side-mark" aria-hidden="true">M.</div>
+        <div className="contact-side-mark" aria-hidden="true">EG.</div>
       </section>
 
       <footer className="footer">
-        <a className="wordmark" href="#top">M<span>.</span></a>
+        <a className="wordmark" href="#top">EG<span>.</span></a>
         <span>AN EDITABLE SAMPLE PROFILE <i /> BUILT TO BE YOURS</span>
         <a href="#top" className="back-top">BACK TO THE TOP <ChevronRight size={13} /></a>
       </footer>
