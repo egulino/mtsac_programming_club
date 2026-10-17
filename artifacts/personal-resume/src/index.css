@@ -147,6 +147,23 @@ button, a { -webkit-tap-highlight-color: transparent; }
   transition: color .2s ease;
 }
 .topbar nav a:hover { color: hsl(var(--primary)); }
+.topbar-actions { display: flex; align-items: center; gap: 10px; }
+.header-linkedin-button {
+  border: 1px solid hsl(var(--foreground) / .26);
+  background: transparent;
+  color: hsl(var(--foreground));
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 14px;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: color .2s ease, background .2s ease, border-color .2s ease;
+}
+.header-linkedin-button:hover { color: hsl(var(--background)); background: hsl(var(--foreground)); border-color: hsl(var(--foreground)); }
 .print-button {
   border: 1px solid hsl(var(--foreground) / .26);
   background: transparent;
@@ -379,7 +396,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .topbar nav { order: 3; width: 100%; overflow-x: auto; justify-content: space-between; gap: 16px; padding: 4px 0 3px; scrollbar-width: none; }
   .topbar nav::-webkit-scrollbar { display: none; }
   .topbar nav a { white-space: nowrap; font-size: 8px; }
-  .print-button { margin-left: auto; padding: 9px 10px; font-size: 9px; }
+  .topbar-actions { margin-left: auto; gap: 7px; }
+  .header-linkedin-button, .print-button { padding: 9px 10px; font-size: 9px; }
   .template-note { justify-content: flex-start; padding: 9px 5%; font-size: 9px; line-height: 1.45; }
   .template-note svg { flex: 0 0 auto; }
   .template-note strong { font-size: 8px; }

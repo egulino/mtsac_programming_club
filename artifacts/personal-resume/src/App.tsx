@@ -4,7 +4,7 @@ import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
 import NotFound from '@/pages/not-found';
-import { ArrowDown, ArrowDownRight, ArrowUpRight, BriefcaseBusiness, ChevronRight, Mail, MapPin, Printer, Sparkles } from 'lucide-react';
+import { ArrowDown, ArrowDownRight, ArrowUpRight, BriefcaseBusiness, ChevronRight, Linkedin, Mail, MapPin, Printer, Sparkles } from 'lucide-react';
 import {
   Route,
   Switch,
@@ -13,6 +13,7 @@ import {
 } from 'wouter';
 
 const queryClient = new QueryClient();
+const linkedinProfileUrl = 'https://www.linkedin.com/in/your-profile/';
 
 function Home() {
   return (
@@ -25,9 +26,14 @@ function Home() {
           <a href="#selected-work">Selected work</a>
           <a href="#contact">Contact</a>
         </nav>
-        <button className="print-button" onClick={() => window.print()} data-testid="button-print-resume">
-          <Printer size={15} strokeWidth={1.8} /> <span>Print résumé</span>
-        </button>
+        <div className="topbar-actions">
+          <a className="header-linkedin-button" href={linkedinProfileUrl} target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">
+            <Linkedin size={15} aria-hidden="true" /> <span>LinkedIn</span>
+          </a>
+          <button className="print-button" onClick={() => window.print()} data-testid="button-print-resume">
+            <Printer size={15} strokeWidth={1.8} /> <span>Print résumé</span>
+          </button>
+        </div>
       </header>
 
       <div className="template-note" role="note">
@@ -166,7 +172,7 @@ function Home() {
           <h2>Good things<br />start with <em>hello.</em></h2>
           <p className="contact-copy">Have a thoughtful challenge, a question, or a book I should read? My inbox is open.</p>
           <a className="contact-button" href="mailto:hello@example.com"><Mail size={17} /> hello@example.com <ArrowUpRight size={16} /></a>
-          <div className="contact-foot"><span>Chino Hills, CA <span>·</span> Open to select collaborations</span><span>LINKEDIN / <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LET’S CONNECT <ArrowUpRight size={12} /></a></span></div>
+          <div className="contact-foot"><span>Chino Hills, CA <span>·</span> Open to select collaborations</span><span>LINKEDIN / <a href={linkedinProfileUrl} target="_blank" rel="noopener noreferrer">LET’S CONNECT <ArrowUpRight size={12} /></a></span></div>
         </div>
         <div className="contact-side-mark" aria-hidden="true">EG.</div>
       </section>
