@@ -32,13 +32,13 @@ function Home() {
 
       <div className="template-note" role="note">
         <Sparkles size={14} aria-hidden="true" />
-        <span><strong>Editable sample profile</strong> — every name, detail, and achievement below is example content. Replace it with your own.</span>
+        <span><strong>Editable sample profile</strong> — career, project, education, and contact details are example content. Replace them with your own.</span>
       </div>
 
       <section className="hero section-wrap" id="top" aria-labelledby="hero-title">
         <div className="hero-grid">
           <div className="hero-copy">
-            <p className="eyebrow reveal"><span className="eyebrow-line" /> DESIGNER &amp; STRATEGIST <span className="eyebrow-dot">/</span> BROOKLYN, NY</p>
+            <p className="eyebrow reveal"><span className="eyebrow-line" /> DESIGNER &amp; STRATEGIST <span className="eyebrow-dot">/</span> CHINO HILLS, CA</p>
             <h1 id="hero-title" className="reveal reveal-delay">Eric<br /><em>Gulino</em><span className="hero-period">.</span></h1>
             <p className="hero-lede reveal reveal-delay">I make complicated things feel <em>clear</em> — and useful things feel a little more human.</p>
             <div className="hero-actions reveal reveal-delay">
@@ -78,7 +78,7 @@ function Home() {
           <div className="intro-text">
             <p>I’m a multidisciplinary designer who likes finding the thread between what people need and what a business can make possible. Over the last decade, I’ve helped teams turn fuzzy ideas into useful products, clearer stories, and better ways of working.</p>
             <p>My sweet spot is the in-between: strategy and execution, big picture and tiny detail, a room full of opinions and the one thing we can all move forward on.</p>
-            <div className="location-line"><MapPin size={15} /> Brooklyn, New York <span>·</span> Working everywhere</div>
+            <div className="location-line"><MapPin size={15} /> Chino Hills, California <span>·</span> Working everywhere</div>
           </div>
         </div>
         <div className="principles">
@@ -166,7 +166,7 @@ function Home() {
           <h2>Good things<br />start with <em>hello.</em></h2>
           <p className="contact-copy">Have a thoughtful challenge, a question, or a book I should read? My inbox is open.</p>
           <a className="contact-button" href="mailto:hello@example.com"><Mail size={17} /> hello@example.com <ArrowUpRight size={16} /></a>
-          <div className="contact-foot"><span>Brooklyn, NY <span>·</span> Open to select collaborations</span><span>LINKEDIN / <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LET’S CONNECT <ArrowUpRight size={12} /></a></span></div>
+          <div className="contact-foot"><span>Chino Hills, CA <span>·</span> Open to select collaborations</span><span>LINKEDIN / <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LET’S CONNECT <ArrowUpRight size={12} /></a></span></div>
         </div>
         <div className="contact-side-mark" aria-hidden="true">EG.</div>
       </section>
