@@ -1,4 +1,4 @@
-import { type FormEvent, type ReactNode, useEffect, useRef, useState } from 'react';
+import { type FormEvent, type ReactNode, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { verifyResumePrintAccess } from '@workspace/api-client-react';
 import { ErrorBoundary } from '@/components/error-boundary';
@@ -97,7 +97,17 @@ function Home() {
     }
   };
 
-  useEffect(() => {
+  useLayoutEffect(() => {
+    window.history.scrollRestoration = 'manual';
+    if (window.location.hash) {
+      window.history.replaceState(
+        window.history.state,
+        '',
+        `${window.location.pathname}${window.location.search}`,
+      );
+    }
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+
     const updateProgress = () => {
       const scrollableHeight =
         document.documentElement.scrollHeight - window.innerHeight;
