@@ -10,6 +10,8 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: resume
+    description: Résumé actions
 paths:
   /healthz:
     get:
@@ -24,6 +26,42 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /resume/print-access:
+    post:
+      operationId: verifyResumePrintAccess
+      tags: [resume]
+      summary: Verify permission to print the résumé
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ResumePrintPasswordInput"
+      responses:
+        "200":
+          description: Password accepted
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ResumePrintAccess"
+        "400":
+          description: Invalid request body
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ResumePrintError"
+        "401":
+          description: Password rejected
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ResumePrintError"
+        "503":
+          description: Print password is not configured
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ResumePrintError"
 components:
   schemas:
     HealthStatus:
@@ -33,4 +71,26 @@ components:
           type: string
       required:
         - status
+    ResumePrintPasswordInput:
+      type: object
+      properties:
+        password:
+          type: string
+          minLength: 1
+      required:
+        - password
+    ResumePrintAccess:
+      type: object
+      properties:
+        authorized:
+          type: boolean
+      required:
+        - authorized
+    ResumePrintError:
+      type: object
+      properties:
+        error:
+          type: string
+      required:
+        - error
 
